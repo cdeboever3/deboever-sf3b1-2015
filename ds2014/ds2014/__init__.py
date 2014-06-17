@@ -55,7 +55,27 @@ brca_cll_luad_lusc_um_sj_annot = os.path.join(root, subdir,
 brca_cll_luad_lusc_um_sj_stats = os.path.join(root, subdir, 
                                               'brca_cll_luad_lusc_um_sj_stats.tsv')
 
+### dexseq
+subdir = os.path.join('output', 'dexseq')
+brca_dexseq_results = os.path.join(root, subdir, 'brca_dexseq_results.tsv')
+cll_dexseq_results = os.path.join(root, subdir, 'cll_dexseq_results.tsv')
+um_dexseq_results = os.path.join(root, subdir, 'um_dexseq_results.tsv')
+brca_cll_um_dexseq_results = os.path.join(root, subdir,
+                                          'brca_cll_um_dexseq_results.tsv')
+brca_cll_luad_lusc_um_dexseq_results = os.path.join(
+    root, subdir, 'brca_cll_luad_lusc_um_dexseq_results.tsv')
+
+brca_size_factors = os.path.join(root, subdir, 'brca_size_factors.tsv')
+cll_size_factors = os.path.join(root, subdir, 'cll_size_factors.tsv')
+um_size_factors = os.path.join(root, subdir, 'um_size_factors.tsv')
+brca_cll_um_size_factors = os.path.join(root, subdir,
+                                        'brca_cll_um_size_factors.tsv')
+brca_cll_luad_lusc_um_size_factors = os.path.join(
+    root, subdir, 'brca_cll_luad_lusc_um_size_factors.tsv')
+
 ## Other stuff
+dexseq_p_cutoff = 0.1
+
 ### Clinical cutoffs for CLL
 #### ROR1 expression above this values is ROR1+
 ror1_cutoff = 0.8 
