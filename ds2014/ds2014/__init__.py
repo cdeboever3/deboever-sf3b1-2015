@@ -91,7 +91,7 @@ def make_color_panel(df):
     dark2 = brewer2mpl.get_map('Dark2','Qualitative',8)
     out = {}
     if 'condition' in df.columns:
-        d = {'MUT' : set1.mpl_colors[1], 'WT' : set1.mpl_colors[0]}
+        d = {'MUT' : set1.mpl_colors[0], 'WT' : set1.mpl_colors[1]}
         out['condition']  = pd.DataFrame([ d[x] for x in df.condition ],
                                          index=df.index)
     
