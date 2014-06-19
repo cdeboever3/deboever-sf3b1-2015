@@ -76,10 +76,10 @@ control_jxns = join(subdir, 'control_jxns.tsv')
 
 proximal_to_annot = join(subdir, 'proximal_to_annot.tsv')
 
-proximal_intron_seq = join(subdir, 'proximal_intron_seq.tsv')
-distal_intron_seq = join(subdir, 'distal_intron_seq.tsv')
-annot_intron_seq = join(subdir, 'annot_intron_seq.tsv')
-control_intron_seq = join(subdir, 'control_intron_seq.tsv')
+proximal_intron_seq = join(subdir, 'proximal_intron_seq.fa')
+distal_intron_seq = join(subdir, 'distal_intron_seq.fa')
+annot_intron_seq = join(subdir, 'annot_intron_seq.fa')
+control_intron_seq = join(subdir, 'control_intron_seq.fa')
 
 proximal_all_bp = join(subdir, 'proximal_all_bp.tsv')
 distal_all_bp = join(subdir, 'distal_all_bp.tsv')
