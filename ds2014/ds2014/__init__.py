@@ -97,6 +97,7 @@ annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
 ## Other stuff
+subfigure_label_fontsize = 10
 dexseq_p_cutoff = 0.1
 
 ### Clinical cutoffs for CLL
