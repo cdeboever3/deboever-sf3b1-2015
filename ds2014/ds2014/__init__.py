@@ -92,9 +92,7 @@ annot_single_bp = join(subdir, 'annot_single_bp.tsv')
 control_single_bp = join(subdir, 'control_single_bp.tsv')
 
 proximal_single_bp_second = join(subdir, 'proximal_single_bp_second.tsv')
-distal_single_bp_second = join(subdir, 'distal_single_bp_second.tsv')
 annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
-control_single_bp_second = join(subdir, 'control_single_bp_second.tsv')
 
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
