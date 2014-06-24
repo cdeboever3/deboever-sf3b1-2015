@@ -96,6 +96,8 @@ distal_single_bp_second = join(subdir, 'distal_single_bp_second.tsv')
 annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 control_single_bp_second = join(subdir, 'control_single_bp_second.tsv')
 
+control_ag_dists = join(subdir, 'control_ag_dists.txt')
+
 ## Other stuff
 dexseq_p_cutoff = 0.1
 
@@ -146,7 +148,10 @@ def makedir(p):
         pass
 
 def _func(x, pos):
-    """Formatter function takes tick label and tick position"""
+    """
+    Formatter function takes tick label and tick position.
+    Use: ax.yaxis.set_major_formatter(ds.comma_format)
+    """
     s = '{:0,d}'.format(int(x))
     return s
 
