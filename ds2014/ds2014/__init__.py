@@ -14,6 +14,7 @@ root = join(x.split('deboever-sf3b1-2014')[0], 'deboever-sf3b1-2014')
 ## data
 subdir = join(root, 'data')
 metadata = join(subdir, 'metadata.tsv')
+ighv_zap70 = join(subdir, 'ighv_zap70.tsv')
 cosmic_sf3b1 = join(subdir, 'cosmic_sf3b1.tsv')
 sf3b1_mut_info = join(subdir, 'sf3b1_mut_info.tsv')
 expressdir = join(subdir, 'express')
@@ -134,10 +135,14 @@ def make_color_panel(df):
                                        index=df.index)
 
     if 'IGHV' in df.columns:
-        True
+        d = {'mutated':set1.mpl_colors[2], 'unmutated':set1.mpl_colors[3]}
+        out['IGHV'] = pd.DataFrame([ d[x] for x in df['IGHV']],
+                                       index=df.index)
 
-    if 'ZAP-70' in df.columns:
-        True
+    if 'ZAP70' in df.columns:
+        d = {'positive':set1.mpl_colors[4], 'negative':set1.mpl_colors[6]}
+        out['ZAP70'] = pd.DataFrame([ d[x] for x in df['ZAP70']],
+                                       index=df.index)
 
     return pd.Panel(out)
 
