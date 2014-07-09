@@ -153,15 +153,24 @@ def makedir(p):
     except OSError:
         pass
 
-def _func(x, pos):
+def _comma_func(x, pos):
     """
     Formatter function takes tick label and tick position.
-    Use: ax.yaxis.set_major_formatter(ds.comma_format)
     """
     s = '{:0,d}'.format(int(x))
     return s
 
-comma_format = tkr.FuncFormatter(_func)
+# Use: ax.yaxis.set_major_formatter(ds.comma_format)
+comma_format = tkr.FuncFormatter(_comma_func)
+
+def _string_func(x, pos):
+    """
+    Formatter function takes tick label and tick position.
+    """
+    return str(x)
+
+# Use: ax.yaxis.set_major_formatter(ds.string_format)
+string_format = tkr.FuncFormatter(_string_func)
 
 def clean_axis(ax):
     "Remove spines and ticks from axis"
