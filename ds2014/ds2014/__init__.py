@@ -21,6 +21,12 @@ expressdir = join(subdir, 'express')
 sjoutdir = join(subdir, 'sjout')
 logfinaldir = join(subdir, 'logfinal')
 
+### cancer_databases
+subdir = join(root, 'data', 'cancer_databases')
+cancer_gene_census = join(subdir, 'cancer_gene_census.tsv')
+cancer_genes = join(subdir, 'cancergenes.txt')
+ts_genes = join(subdir, 'Human_716_TSGs.txt')
+
 ## ext_data
 subdir = join(root, 'ext_data')
 gencode_gtf = join(subdir, 'gencode',
