@@ -63,6 +63,12 @@ brca_cll_luad_lusc_um_sj_counts = join(subdir, 'brca_cll_luad_lusc_um_sj_counts.
 brca_cll_luad_lusc_um_sj_annot = join(subdir, 'brca_cll_luad_lusc_um_sj_annot.tsv')
 brca_cll_luad_lusc_um_sj_stats = join(subdir, 'brca_cll_luad_lusc_um_sj_stats.tsv')
 
+### deseq2
+subdir = join(root, 'output', 'deseq2')
+brca_cll_um_deseq2_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
+brca_cll_um_deseq2_results = join(subdir, 'brca_cll_um_results.csv')
+brca_cll_um_deseq2_sig_genes = join(subdir, 'brca_cll_um_sig_genes.tsv')
+
 ### dexseq
 subdir = join(root, 'output', 'dexseq')
 brca_dexseq_results = join(subdir, 'brca_dexseq_results.tsv')
@@ -106,8 +112,10 @@ annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
 ## Other stuff
+figshare_article_id = '1066525'
 subfigure_label_fontsize = 10
 dexseq_p_cutoff = 0.1
+deseq2_p_cutoff = 0.1
 
 ### Clinical cutoffs for CLL
 #### ROR1 expression above this values is ROR1+
