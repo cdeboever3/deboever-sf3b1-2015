@@ -68,6 +68,7 @@ subdir = join(root, 'output', 'deseq2')
 brca_cll_um_deseq2_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
 brca_cll_um_deseq2_results = join(subdir, 'brca_cll_um_results.csv')
 brca_cll_um_deseq2_sig_genes = join(subdir, 'brca_cll_um_sig_genes.tsv')
+cll_deseq2_results = join(subdir, 'cll_results.csv')
 
 ### dexseq
 subdir = join(root, 'output', 'dexseq')
@@ -85,6 +86,7 @@ brca_cll_luad_lusc_um_dexseq_size_factors = join(subdir, 'brca_cll_luad_lusc_um_
 ### branchpoint_analysis
 subdir = join(root, 'output', 'branchpoint_analysis')
 proximal_jxns = join(subdir, 'proximal_jxns.tsv')
+not_proximal_jxns = join(subdir, 'not_proximal_jxns.tsv')
 distal_jxns = join(subdir, 'distal_jxns.tsv')
 annot_jxns = join(subdir, 'annot_jxns.tsv')
 control_jxns = join(subdir, 'control_jxns.tsv')
@@ -92,16 +94,19 @@ control_jxns = join(subdir, 'control_jxns.tsv')
 proximal_to_annot = join(subdir, 'proximal_to_annot.tsv')
 
 proximal_intron_seq = join(subdir, 'proximal_intron_seq.fa')
+not_proximal_intron_seq = join(subdir, 'not_proximal_intron_seq.fa')
 distal_intron_seq = join(subdir, 'distal_intron_seq.fa')
 annot_intron_seq = join(subdir, 'annot_intron_seq.fa')
 control_intron_seq = join(subdir, 'control_intron_seq.fa')
 
 proximal_all_bp = join(subdir, 'proximal_all_bp.tsv')
+not_proximal_all_bp = join(subdir, 'not_proximal_all_bp.tsv')
 distal_all_bp = join(subdir, 'distal_all_bp.tsv')
 annot_all_bp = join(subdir, 'annot_all_bp.tsv')
 control_all_bp = join(subdir, 'control_all_bp.tsv')
 
 proximal_single_bp = join(subdir, 'proximal_single_bp.tsv')
+not_proximal_single_bp = join(subdir, 'not_proximal_single_bp.tsv')
 distal_single_bp = join(subdir, 'distal_single_bp.tsv')
 annot_single_bp = join(subdir, 'annot_single_bp.tsv')
 control_single_bp = join(subdir, 'control_single_bp.tsv')
