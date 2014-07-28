@@ -11,7 +11,8 @@ methods section of the paper.
 This git repository holds IPython notebooks and code needed to replicate the
 study.  Additional data are available from Figshare [XXX URL] and must be
 downloaded before attempting to replicate the study. After cloning this Github
-repository, you can use the XXX notebook to download the data from Figshare.
+repository, you can use the `figshare_download` notebook to download the data 
+from Figshare.
 
 ### Overview
 
@@ -49,12 +50,12 @@ need
 You can download cdpybio and figshare from their Github repos (links above) and
 install using `python setup.py install`. 
 
-You will also need to install the project specific Python package from this
-repository. If you are using Anaconda, I'd recommend making a new environment.
-From the `deboever-sf3b1-2014` directory, you can change into `ds2014` and
-install using `python setup.py install` or `python setup.py develop` if you
-think you may want to make changes to the ds2014 package and have these
-changes instantly propagated.
+You will also need to install the project specific Python package ds2014 from
+this repository. If you are using Anaconda, I'd recommend making a new
+environment.  From the `deboever-sf3b1-2014` directory, you can change into
+`ds2014` and install using `python setup.py install` or `python setup.py
+develop` if you think you may want to make changes to the ds2014 package and
+have these changes instantly propagated.
 
 ### Downloading data from Figshare
 
@@ -80,6 +81,16 @@ recreated when you run a given notebook.
 
 Downloaded from Figshare. Contains primary data files (i.e. those that aren't
 created by any of the code here). You shouldn't delete or alter these.
+
+##### ds2014
+
+This directory contains a Python package specific to this project. See the
+Dependencies section of this README for installation instructions.
+
+##### ext_data
+
+This directory holds data downloaded externally that I trust will still be 
+available in the future. These data are downloaded using the `ext_data`
 
 ##### notebooks  
 
