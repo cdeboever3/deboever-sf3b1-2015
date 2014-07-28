@@ -83,8 +83,8 @@ um_dexseq_size_factors = join(subdir, 'um_size_factors.tsv')
 brca_cll_um_dexseq_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
 brca_cll_luad_lusc_um_dexseq_size_factors = join(subdir, 'brca_cll_luad_lusc_um_size_factors.tsv')
 
-### branchpoint_analysis
-subdir = join(root, 'output', 'branchpoint_analysis')
+### branch point_analysis
+subdir = join(root, 'output', 'branch_point_analysis')
 proximal_jxns = join(subdir, 'proximal_jxns.tsv')
 not_proximal_jxns = join(subdir, 'not_proximal_jxns.tsv')
 distal_jxns = join(subdir, 'distal_jxns.tsv')
