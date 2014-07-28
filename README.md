@@ -89,8 +89,10 @@ Dependencies section of this README for installation instructions.
 
 ##### ext_data
 
-This directory holds data downloaded externally that I trust will still be 
+This directory holds data downloaded externally that I trust will still be
 available in the future. These data are downloaded using the `ext_data`
+notebook.  There may be some other notebooks that store data in here too but I
+don't think so.
 
 ##### notebooks  
 
