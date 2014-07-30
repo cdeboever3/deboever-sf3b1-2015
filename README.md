@@ -129,9 +129,9 @@ folder or they are available in the `data` directory from Figshare.
 
 ### Terminology
 
-In the manuscript, I refer to 3\' splice sites only as 3\' splice sites or
-3\'SSs. However, in the code and notebooks for this project, I sometimes refer
-to them as acceptors. Similarly, I refer to 5\' splice sites as donors in the
+In the manuscript, I refer to 3' splice sites only as 3' splice sites or
+3'SSs. However, in the code and notebooks for this project, I sometimes refer
+to them as acceptors. Similarly, I refer to 5' splice sites as donors in the
 code and notebooks in some cases. I generally try to "junction" to refer to a
 gap spanned in the RNA-seq data and "splice site" to refer to an annotated or
 cryptic splice site.

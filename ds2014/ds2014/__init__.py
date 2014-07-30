@@ -65,9 +65,10 @@ brca_cll_luad_lusc_um_sj_stats = join(subdir, 'brca_cll_luad_lusc_um_sj_stats.ts
 
 ### deseq2
 subdir = join(root, 'output', 'deseq2')
-brca_cll_um_deseq2_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
+brca_cll_um_deseq2_size_factors = join(subdir, 'brca_cll_um_deseq2_size_factors.tsv')
 brca_cll_um_deseq2_results = join(subdir, 'brca_cll_um_results.csv')
 brca_cll_um_deseq2_sig_genes = join(subdir, 'brca_cll_um_sig_genes.tsv')
+cll_deseq2_size_factors = join(subdir, 'brca_cll_um_deseq2_size_factors.tsv')
 cll_deseq2_results = join(subdir, 'cll_results.csv')
 
 ### dexseq
@@ -117,7 +118,8 @@ annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
 ## Other stuff
-figshare_article_id = '1066525'
+figshare_article_id = '1120663'
+figshare_manifest = join(root, 'manifest.tsv')
 subfigure_label_fontsize = 10
 dexseq_p_cutoff = 0.1
 deseq2_p_cutoff = 0.1
