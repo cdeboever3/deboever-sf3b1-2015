@@ -45,19 +45,18 @@ A working IPython notebook environment is needed along with some of the common
 scientific Python packages that you likely already have as part of a working
 IPython notebook environment. I recommend using 
 [Anaconda Python](https://store.continuum.io/cshop/anaconda/) since it includes
-most of the needed packages. Besides the default Anaconda packages, you will 
-need
+most of the needed packages. You will need to use the `pylab` flag when running 
+the notebooks. Besides the default Anaconda packages, you will need
 
 * pybedtools
 * [cdpybio](https://Github.com/cdeboever3/cdpybio)
-* [my figshare fork](https://Github.com/cdeboever3/figshare)
 
-You can download cdpybio and figshare from their Github repos (links above) and
-install using `python setup.py install`. 
+You can download cdpybio from its [Github
+repo](https://Github.com/cdeboever3/cdpybio) and install using `python setup.py
+install`. 
 
 You will also need to install the project specific Python package ds2014 from
-this repository. If you are using Anaconda, I'd recommend making a new
-environment.  From the `deboever-sf3b1-2014` directory, you can change into
+this repository. From the `deboever-sf3b1-2014` directory, you can change into
 `ds2014` and install using `python setup.py install` or `python setup.py
 develop` if you think you may want to make changes to the ds2014 package and
 have these changes instantly propagated.
