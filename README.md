@@ -9,10 +9,11 @@ expression estimation, etc.  Information on those steps is available in the
 methods section of the paper.
 
 This git repository holds IPython notebooks and code needed to replicate the
-study.  Additional data are available from Figshare [XXX URL] and must be
-downloaded before attempting to replicate the study. After cloning this Github
-repository, you can use the `figshare_download` notebook to download the data 
-from Figshare.
+study.  Additional data are available in this Figshare
+[fileset](http://dx.doi.org/10.6084/m9.figshare.1120663) and must be downloaded
+before attempting to replicate the study. After cloning this Github repository,
+you can use the `figshare_download` notebook to download the data from
+Figshare.
 
 ### Overview
 
@@ -21,13 +22,15 @@ replicating the study:
 
 * clone this repository from Github
 * install dependencies
-* use included IPython notebook to download data from Figshare
+* use `figshare_download` notebook to download data from Figshare
+* use `ext_data` notebook to download data from external sources
 * run desired notebooks
 
 ### Cloning from Github
 
-TODO: add more here
-Important: don't change the name of the repository (e.g. deboever-sf3b1-2014).
+You can clone this repository using the button on the side of the page. It is
+important that you don't change the name of the repository (e.g.
+deboever-sf3b1-2014).
 
 ### Dependencies
 
@@ -57,7 +60,11 @@ environment.  From the `deboever-sf3b1-2014` directory, you can change into
 develop` if you think you may want to make changes to the ds2014 package and
 have these changes instantly propagated.
 
-### Downloading data from Figshare
+### Downloading data from Figshare and external sources
+
+After cloning the repository and installing the dependencies, you should be
+able to just run the `figshare_download` and `ext_data` notebooks to download
+the necessary data.
 
 ### Running notebooks
 
