@@ -1,12 +1,10 @@
 deboever-sf3b1-2014
 ===================
 
-Code for reproducing SF3B1 study.
-
 This repository is designed to allow for the replication of [XXX paper]
 starting *after* some of the time intensive steps such as read-mapping,
-expression estimation, etc.  Information on those steps is available in the
-methods section of the paper.
+expression estimation, etc.  Information on the time intensitive steps is
+available in the methods section of the paper.
 
 This git repository holds IPython notebooks and code needed to replicate the
 study.  Additional data are available in this Figshare
@@ -14,6 +12,10 @@ study.  Additional data are available in this Figshare
 before attempting to replicate the study. After cloning this Github repository,
 you can use the `figshare_download` notebook to download the data from
 Figshare.
+
+If you have any trouble replicating the results, please let me know using
+Github's issues. If you are having trouble installing dependencies, try the
+help resources for those software.
 
 ### Overview
 
