@@ -3,7 +3,7 @@ deboever-sf3b1-2014
 
 This repository is designed to allow for the replication of [XXX paper]
 starting *after* some of the time intensive steps such as read-mapping,
-expression estimation, etc.  Information on the time intensitive steps is
+expression estimation, etc.  Information on the time intensive steps is
 available in the methods section of the paper.
 
 This git repository holds IPython notebooks and code needed to replicate the
