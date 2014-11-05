@@ -1,3 +1,6 @@
 [submodule "submodules/cdpybio"]
 	path = submodules/cdpybio
 	url = git@github.com:cdeboever3/cdpybio.git
+[submodule "submodules/sj2psi"]
+	path = submodules/sj2psi
+	url = git@github.com:cdeboever3/sj2psi.git
