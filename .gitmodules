@@ -4,3 +4,6 @@
 [submodule "submodules/sj2psi"]
 	path = submodules/sj2psi
 	url = git@github.com:cdeboever3/sj2psi.git
+[submodule "submodules/pybeeswarm"]
+	path = submodules/pybeeswarm
+	url = https://github.com/mgymrek/pybeeswarm
