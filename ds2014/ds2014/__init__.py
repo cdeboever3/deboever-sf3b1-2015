@@ -1,9 +1,12 @@
 import os
 from os.path import join
 
+from Bio.Seq import Seq
 import matplotlib.colors as colors
 import matplotlib.ticker as tkr
 import pandas as pd
+import pybedtools as pbt
+import subprocess
 
 # File locations
 # Rather than specifying paths all over, I'll just put the paths to commonly
@@ -84,7 +87,7 @@ um_dexseq_size_factors = join(subdir, 'um_size_factors.tsv')
 brca_cll_um_dexseq_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
 brca_cll_luad_lusc_um_dexseq_size_factors = join(subdir, 'brca_cll_luad_lusc_um_size_factors.tsv')
 
-### branch point_analysis
+### branch_point_analysis
 subdir = join(root, 'output', 'branch_point_analysis')
 proximal_jxns = join(subdir, 'proximal_jxns.tsv')
 not_proximal_jxns = join(subdir, 'not_proximal_jxns.tsv')
@@ -116,6 +119,10 @@ proximal_single_bp_second = join(subdir, 'proximal_single_bp_second.tsv')
 annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
+
+# susceptible_introns
+subdir = join(root, 'output', 'susceptible_introns')
+not_sig_intron_seq = join(subdir, 'introns.fa')
 
 ## Other stuff
 figshare_article_id = '1120663'
@@ -199,3 +206,11 @@ def clean_axis(ax):
     ax.get_yaxis().set_ticks([])
     for sp in ax.spines.values():
         sp.set_visible(False)
+
+def predict_branch_points(intron_fasta):
+    lines = subprocess.check_output([os.path.join(root, 'software', 
+                                                  'svm-bpfinder', 
+                                                  'svm_bpfinder.py'),
+                                     intron_fasta, 'Hsap', '50'])
+    lines = [ x.split('\t') for x in lines.strip().split('\n') ]
+    return pd.DataFrame(lines[1:], columns=lines[0])

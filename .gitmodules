@@ -7,3 +7,4 @@
 [submodule "submodules/pybeeswarm"]
 	path = submodules/pybeeswarm
 	url = https://github.com/mgymrek/pybeeswarm
+	ignore = dirty
