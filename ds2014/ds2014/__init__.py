@@ -208,6 +208,9 @@ def _string_func(x, pos):
 # Use: ax.yaxis.set_major_formatter(ds.string_format)
 string_format = tkr.FuncFormatter(_string_func)
 
+## Functions used throughout project
+# These are functions that are used in more than one notebook.
+
 def clean_axis(ax):
     "Remove spines and ticks from axis"
     ax.get_xaxis().set_ticks([])
@@ -230,3 +233,21 @@ def make_uniq_bp_results(all_bp):
                      ascending=False).drop_duplicates('seq_id')
     df.index = list(df.seq_id)
     return df
+
+def get_annotated_jxn(row):
+    """
+    Define the downstream annotated junction for a 
+    junction with a novel acceptor using a row
+    from the results table
+    """
+    if row['strand'] == '+':        
+        return '{}:{}-{}:{}'.format(
+            row['chrom'], row['start'],
+            row['end'] + int(row['downstream_acceptor_dist']), row['strand']
+        )
+    if row['strand'] == '-':
+        return '{}:{}-{}:{}'.format(
+            row['chrom'], 
+            row['start'] - int(row['downstream_acceptor_dist']), row['end'],
+            row['strand']
+        )
