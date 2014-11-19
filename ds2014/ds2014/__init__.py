@@ -40,6 +40,8 @@ gencode_translations = join(subdir, 'gencode',
                                    'gencode.v14.pc_translations.fa')
 hg19 = join(subdir, 'hg19.fa')
 
+## output
+
 ### gencode_sjout_express_processing
 subdir = join(root, 'output', 'gencode_sjout_express_processing')
 gene_info = join(subdir, 'gene_info.tsv')
@@ -120,9 +122,15 @@ annot_single_bp_second = join(subdir, 'annot_single_bp_second.tsv')
 
 control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
-# susceptible_introns
+### susceptible_introns
 subdir = join(root, 'output', 'susceptible_introns')
 not_sig_intron_seq = join(subdir, 'introns.fa')
+not_sig_all_bp = join(subdir, 'bps.tsv')
+
+### psi_analysis
+subdir = join(root, 'output', 'psi_analysis')
+psi5 = join(subdir, 'psi5.tsv')
+psi3 = join(subdir, 'psi3.tsv')
 
 ## Other stuff
 figshare_article_id = '1120663'
@@ -213,4 +221,12 @@ def predict_branch_points(intron_fasta):
                                                   'svm_bpfinder.py'),
                                      intron_fasta, 'Hsap', '50'])
     lines = [ x.split('\t') for x in lines.strip().split('\n') ]
-    return pd.DataFrame(lines[1:], columns=lines[0])
+    return pd.DataFrame(lines[1:],
+                        columns=lines[0]).convert_objects(convert_numeric=True)
+
+def make_uniq_bp_results(all_bp):
+    assert all_bp.ss_dist.dtype == int
+    df = all_bp.sort(['seq_id', 'bp_scr'], 
+                     ascending=False).drop_duplicates('seq_id')
+    df.index = list(df.seq_id)
+    return df
