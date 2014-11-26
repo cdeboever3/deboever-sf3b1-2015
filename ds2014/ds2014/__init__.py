@@ -93,6 +93,7 @@ brca_cll_luad_lusc_um_dexseq_size_factors = join(subdir, 'brca_cll_luad_lusc_um_
 brca_cll_um_psi = join(subdir, 'brca_cll_um_psi.tsv')
 cll_psi = join(subdir, 'cll_psi.tsv')
 brca_psi = join(subdir, 'brca_psi.tsv')
+cll_psi_high = join(subdir, 'cll_psi_high.tsv')
 
 ### branch_point_analysis
 subdir = join(root, 'output', 'branch_point_analysis')
