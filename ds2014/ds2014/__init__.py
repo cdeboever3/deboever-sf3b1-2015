@@ -4,6 +4,7 @@ from os.path import join
 from Bio.Seq import Seq
 import matplotlib.colors as colors
 import matplotlib.ticker as tkr
+import numpy as np
 import pandas as pd
 import pybedtools as pbt
 import subprocess
@@ -23,6 +24,7 @@ sf3b1_mut_info = join(subdir, 'sf3b1_mut_info.tsv')
 expressdir = join(subdir, 'express')
 sjoutdir = join(subdir, 'sjout')
 logfinaldir = join(subdir, 'logfinal')
+ferreira_sfile3 = join(subdir, 'Supplemental_File3_Splicingtable.xls')
 
 ### cancer_databases
 subdir = join(root, 'data', 'cancer_databases')
@@ -88,6 +90,9 @@ cll_dexseq_size_factors = join(subdir, 'cll_size_factors.tsv')
 um_dexseq_size_factors = join(subdir, 'um_size_factors.tsv')
 brca_cll_um_dexseq_size_factors = join(subdir, 'brca_cll_um_size_factors.tsv')
 brca_cll_luad_lusc_um_dexseq_size_factors = join(subdir, 'brca_cll_luad_lusc_um_size_factors.tsv')
+brca_cll_um_psi = join(subdir, 'brca_cll_um_psi.tsv')
+cll_psi = join(subdir, 'cll_psi.tsv')
+brca_psi = join(subdir, 'brca_psi.tsv')
 
 ### branch_point_analysis
 subdir = join(root, 'output', 'branch_point_analysis')
@@ -251,3 +256,20 @@ def get_annotated_jxn(row):
             row['start'] - int(row['downstream_acceptor_dist']), row['end'],
             row['strand']
         )
+
+def psi_df(results, counts):
+    df = results[(results.padjust < dexseq_p_cutoff) &
+                 (results.downstream_acceptor_dist <= 30) &
+                 (results.downstream_acceptor_dist >= 10) &
+                 (results['log2fold(MUT/WT)'] > 0)]
+
+    annot_jxns = pd.Series(
+        results.ix[df.index].apply(lambda x: get_annotated_jxn(x), axis=1))
+    psi = (counts.ix[annot_jxns.index].values / 
+           (counts.ix[annot_jxns.index].values + 
+            counts.ix[annot_jxns.values].values))
+    psi = pd.DataFrame(psi, index=annot_jxns.index,
+                       columns=counts.columns)
+    psi = psi.dropna(how='all')
+    psi = psi.replace(np.nan, 0)
+    return psi
