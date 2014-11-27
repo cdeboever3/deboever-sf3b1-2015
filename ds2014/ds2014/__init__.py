@@ -9,6 +9,8 @@ import pandas as pd
 import pybedtools as pbt
 import subprocess
 
+import fig
+
 # File locations
 # Rather than specifying paths all over, I'll just put the paths to commonly
 # used files and directories here and use the package to open them. 
