@@ -132,13 +132,17 @@ control_ag_dists = join(subdir, 'control_ag_dists.txt')
 
 ### susceptible_introns
 subdir = join(root, 'output', 'susceptible_introns')
-not_sig_intron_seq = join(subdir, 'introns.fa')
-not_sig_all_bp = join(subdir, 'bps.tsv')
+susc_intron_seq = join(subdir, 'introns.fa')
+susc_all_bp = join(subdir, 'bps.tsv')
 
 ### psi_analysis
 subdir = join(root, 'output', 'psi_analysis')
 psi5 = join(subdir, 'psi5.tsv')
 psi3 = join(subdir, 'psi3.tsv')
+
+### ferreira_comparison
+subdir = join(root, 'output', 'ferreira_comparison')
+ferreira_results = join(subdir, 'ferreira_results.tsv')
 
 ## Other stuff
 figshare_article_id = '1120663'
