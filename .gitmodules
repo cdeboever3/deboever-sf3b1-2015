@@ -8,3 +8,6 @@
 	path = submodules/pybeeswarm
 	url = https://github.com/mgymrek/pybeeswarm
 	ignore = dirty
+[submodule "submodules/figshare"]
+	path = submodules/figshare
+	url = https://github.com/cdeboever3/figshare.git
