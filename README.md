@@ -1,8 +1,8 @@
-deboever-sf3b1-2014
+DeBoever *et al.* 2014
 ===================
 
-This repository is designed to allow for the replication of [XXX paper]
-starting *after* some of the time intensive steps such as read-mapping,
+This repository is designed to allow for the replication of DeBoever *et al.*
+2014 starting *after* some of the time intensive steps such as read-mapping,
 expression estimation, etc.  Information on the time intensive steps is
 available in the methods section of the paper.
 
@@ -14,8 +14,8 @@ you can use the `figshare_download` notebook to download the data from
 Figshare.
 
 If you have any trouble replicating the results, please let me know using
-Github's issues. If you are having trouble installing dependencies, try the
-help resources for those software.
+Github's issue tracker. If you are having trouble installing dependencies, try
+the help resources for those software.
 
 ### Overview
 
@@ -31,7 +31,7 @@ replicating the study:
 ### Cloning from Github
 
 You can clone this repository using the button on the side of the page. It is
-important that you don't change the name of the repository (e.g.
+important that you don't change the name of the repository (i.e.
 deboever-sf3b1-2014).
 
 ### Dependencies
@@ -46,14 +46,23 @@ scientific Python packages that you likely already have as part of a working
 IPython notebook environment. I recommend using 
 [Anaconda Python](https://store.continuum.io/cshop/anaconda/) since it includes
 most of the needed packages. You will need to use the `pylab` flag when running 
-the notebooks. Besides the default Anaconda packages, you will need
+the notebooks (e.g. `ipython notebook --pylab inline`). Besides the default
+Anaconda packages, you will need
 
 * pybedtools
-* [cdpybio](https://Github.com/cdeboever3/cdpybio)
+* cdpybio
+* figshare
+* pybeeswarm
 
-You can download cdpybio from its [Github
-repo](https://Github.com/cdeboever3/cdpybio) and install using `python setup.py
-install`. 
+You can get pybedtools through pip. cdpybio, figshare, and pybeeswarm are
+included in this repository as submodules. After cloning this repository from
+Github, change into the repo directory and run:
+
+	git submodule init
+	git submodule update
+
+You will then need to install the python packages using `python setup.py
+install`.  
 
 You will also need to install the project specific Python package ds2014 from
 this repository. From the `deboever-sf3b1-2014` directory, you can change into
@@ -65,15 +74,16 @@ have these changes instantly propagated.
 
 After cloning the repository and installing the dependencies, you should be
 able to just run the `figshare_download` and `ext_data` notebooks to download
-the necessary data.
+the necessary data. 
 
 ### Running notebooks
 
 The IPython notebooks for this project are somewhat ordered in how they should
 be run because some notebooks rely on the output of other notebooks. However,
 all of the intermediate files are downloaded from Figshare so you should be
-able to run any notebook initially. Note that some notebooks will not actually
-recreate their output files if the files already exists:
+able to run any notebook if you've downloaded all of the files from Figshare..
+Note that some notebooks will not actually recreate their output files if the
+files already exists:
 
 	if not os.path.exists([some output file]):
 		[do analysis]
@@ -99,8 +109,8 @@ Dependencies section of this README for installation instructions.
 
 This directory holds data downloaded externally that I trust will still be
 available in the future. These data are downloaded using the `ext_data`
-notebook.  There may be some other notebooks that store data in here too but I
-don't think so.
+notebook.  There may be some other notebooks that store data in this directory
+as well but I tried to move everything into the `ext_data` notebook.
 
 ##### notebooks  
 
@@ -110,7 +120,7 @@ IPython notebooks tracked by git. Use these to rerun different analyses.
 
 Output from IPython notebooks. Contains intermediate files (i.e. files that are
 created using the primary data and other external data) as well as images,
-table, etc. For figures that require some Illustrator manipulation (currently
+tables, etc. For figures that require some Illustrator manipulation (currently
 Figures 2 and 3), I try to copy the final figure into the output folder as
 well.
 
@@ -130,8 +140,8 @@ in the figure notebooks however (although they may be duplicated in
 ### Figures
 
 Each figure has its own notebook (e.g. `figure01.ipynb` or `sfigure01.ipynb`).
-These notebooks create the entire figure in go except for a couple cases where
-some parts of the figure have to be inserted manually. The things to be
+These notebooks create the entire figure in one go except for a couple cases
+where some parts of the figure have to be inserted manually. The things to be
 inserted manually are either created by the notebook and saved in its output
 folder or they are available in the `data` directory from Figshare.
 
@@ -140,8 +150,8 @@ folder or they are available in the `data` directory from Figshare.
 In the manuscript, I refer to 3' splice sites only as 3' splice sites or
 3'SSs. However, in the code and notebooks for this project, I sometimes refer
 to them as acceptors. Similarly, I refer to 5' splice sites as donors in the
-code and notebooks in some cases. I generally try to "junction" to refer to a
-gap spanned in the RNA-seq data and "splice site" to refer to an annotated or
+code and notebooks in some cases. I generally try to use "junction" to refer to
+a gap spanned in the RNA-seq data and "splice site" to refer to an annotated or
 cryptic splice site.
 
 In the manuscript, I refer to 3'SSs or other features annotated in Gencode as
