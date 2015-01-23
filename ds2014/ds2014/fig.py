@@ -100,7 +100,7 @@ def plot_hist(res, ax, mut_color, wt_color,
         offset = 0.1 * (ax.get_xlim()[1] - ax.get_xlim()[0])
         t = ax.text(ax.get_xlim()[0] - offset, 
                     ax.get_ylim()[1], 
-                    letter_label, weight='bold', 
+                    letter_label, 
                     size=ds.subfigure_label_fontsize)
     return ax
 
@@ -119,7 +119,7 @@ def plot_polygon(ax, fig):
     ax2 = fig.add_axes(Bbox(fig_coords), zorder=5)
     return ax, ax2
 
-def plot_little_hist(res, ax, mut_color, wt_color):
+def plot_little_hist(res, ax, mut_color, wt_color, halve_yticks=False):
     df = res[res.novel_acceptor]
     t = -1 * df.ix[((df.padjust < ds.dexseq_p_cutoff) & 
                     (df['log2fold(WT/MUT)'] < 0)),
@@ -132,5 +132,7 @@ def plot_little_hist(res, ax, mut_color, wt_color):
     ax.spines['top'].set_visible(False)
     for l in ax.get_xticklines() + ax.get_yticklines(): 
         l.set_markersize(0)
+    if halve_yticks:
+        ax.set_yticks(ax.get_yticks()[0::2])
     ax.xaxis.set_major_formatter(ds.comma_format)
     ax.yaxis.set_major_formatter(ds.comma_format)
