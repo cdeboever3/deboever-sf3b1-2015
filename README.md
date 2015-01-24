@@ -1,8 +1,8 @@
-DeBoever *et al.* 2014
+DeBoever *et al.* 2015
 ===================
 
 This repository is designed to allow for the replication of DeBoever *et al.*
-2014 starting *after* some of the time intensive steps such as read-mapping,
+2015 starting *after* some of the time intensive steps such as read-mapping,
 expression estimation, etc.  Information on the time intensive steps is
 available in the methods section of the paper.
 
@@ -32,7 +32,7 @@ replicating the study:
 
 You can clone this repository using the button on the side of the page. It is
 important that you don't change the name of the repository (i.e.
-deboever-sf3b1-2014).
+deboever-sf3b1-2015).
 
 ### Dependencies
 
@@ -53,6 +53,7 @@ Anaconda packages, you will need
 * cdpybio
 * figshare
 * pybeeswarm
+* rpy2
 
 You can get pybedtools through pip. cdpybio, figshare, and pybeeswarm are
 included in this repository as submodules. After cloning this repository from
@@ -62,10 +63,12 @@ Github, change into the repo directory and run:
 	git submodule update
 
 You will then need to install the python packages using `python setup.py
-install`.  
+install`. These packages are not used in every notebook, so you can probably
+get away without installing some of them if you only want to run certain
+notebooks.
 
 You will also need to install the project specific Python package ds2014 from
-this repository. From the `deboever-sf3b1-2014` directory, you can change into
+this repository. From the `deboever-sf3b1-2015` directory, you can change into
 `ds2014` and install using `python setup.py install` or `python setup.py
 develop` if you think you may want to make changes to the ds2014 package and
 have these changes instantly propagated.
