@@ -15,7 +15,7 @@ import fig
 # Rather than specifying paths all over, I'll just put the paths to commonly
 # used files and directories here and use the package to open them. 
 x = os.getcwd()
-root = join(x.split('deboever-sf3b1-2014')[0], 'deboever-sf3b1-2014')
+root = join(x.split('deboever-sf3b1-2015')[0], 'deboever-sf3b1-2015')
 
 ## data
 subdir = join(root, 'data')

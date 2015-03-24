@@ -1,8 +1,9 @@
 DeBoever *et al.* 2015
 ===================
 
-This repository is designed to allow for the replication of DeBoever *et al.*
-2015 starting *after* some of the time intensive steps such as read-mapping,
+This repository is designed to allow for the replication of [DeBoever *et al.*
+2015](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004105)
+starting *after* some of the time intensive steps such as read-mapping,
 expression estimation, etc.  Information on the time intensive steps is
 available in the methods section of the paper.
 
