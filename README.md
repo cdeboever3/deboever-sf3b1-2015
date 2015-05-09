@@ -46,9 +46,8 @@ A working IPython notebook environment is needed along with some of the common
 scientific Python packages that you likely already have as part of a working
 IPython notebook environment. I recommend using 
 [Anaconda Python](https://store.continuum.io/cshop/anaconda/) since it includes
-most of the needed packages. You will need to use the `pylab` flag when running 
-the notebooks (e.g. `ipython notebook --pylab inline`). Besides the default
-Anaconda packages, you will need
+most of the needed packages.  Besides the default Anaconda packages, you will
+need
 
 * pybedtools
 * cdpybio
