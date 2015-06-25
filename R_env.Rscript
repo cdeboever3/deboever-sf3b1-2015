@@ -1,0 +1,7 @@
+# This script loads the R libraries I use and writes sessionInfo() so someone
+# can replicate the R environent if needed.
+
+library(DESeq)
+library(DEXSeq)
+library(multicore)
+sessionInfo()

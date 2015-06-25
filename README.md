@@ -46,18 +46,22 @@ A working IPython notebook environment is needed along with some of the common
 scientific Python packages that you likely already have as part of a working
 IPython notebook environment. I recommend using 
 [Anaconda Python](https://store.continuum.io/cshop/anaconda/) since it includes
-most of the needed packages.  Besides the default Anaconda packages, you will
-need
+most of the needed packages. You can create an appropriate conda environment
+named sf3b1 using
 
-* pybedtools
-* cdpybio
-* figshare
-* pybeeswarm
-* rpy2
+	conda create --name sf3b1 --file conda_env.txt
 
-You can get pybedtools through pip. cdpybio, figshare, and pybeeswarm are
-included in this repository as submodules. After cloning this repository from
-Github, change into the repo directory and run:
+Besides the default Anaconda packages, you will need
+
+* `pybedtools` (0.6.6)
+* `cdpybio`
+* `figshare`
+* `pybeeswarm`
+* `rpy2` (2.3.9)
+
+You can get `pybedtools` through pip. `cdpybio`, `figshare`, and `pybeeswarm`
+are included in this repository as submodules. After cloning this repository
+from Github, change into the repo directory and run:
 
 	git submodule init
 	git submodule update
@@ -67,11 +71,11 @@ install`. These packages are not used in every notebook, so you can probably
 get away without installing some of them if you only want to run certain
 notebooks.
 
-You will also need to install the project specific Python package ds2014 from
+You will also need to install the project specific Python package `ds2014` from
 this repository. From the `deboever-sf3b1-2015` directory, you can change into
 `ds2014` and install using `python setup.py install` or `python setup.py
-develop` if you think you may want to make changes to the ds2014 package and
-have these changes instantly propagated.
+develop` if you think you may want to make changes to the `ds2014` package and
+have these changes instantly propagated without re-installing the package.
 
 ### Downloading data from Figshare and external sources
 
@@ -84,7 +88,7 @@ the necessary data.
 The IPython notebooks for this project are somewhat ordered in how they should
 be run because some notebooks rely on the output of other notebooks. However,
 all of the intermediate files are downloaded from Figshare so you should be
-able to run any notebook if you've downloaded all of the files from Figshare..
+able to run any notebook if you've downloaded all of the files from Figshare.
 Note that some notebooks will not actually recreate their output files if the
 files already exists:
 

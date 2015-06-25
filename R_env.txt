@@ -1,0 +1,73 @@
+Loading required package: Biobase
+Loading required package: BiocGenerics
+Loading required package: methods
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following object is masked from ‘package:stats’:
+
+    xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, as.data.frame, cbind, colnames, duplicated, eval,
+    Filter, Find, get, intersect, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rep.int, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unlist
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: locfit
+locfit 1.5-9.1 	 2013-03-22
+Loading required package: lattice
+
+Attaching package: ‘multicore’
+
+The following object is masked from ‘package:lattice’:
+
+    parallel
+
+The following object is masked from ‘package:parallel’:
+
+    mclapply, mcparallel, pvec
+
+R version 3.0.0 (2013-04-03)
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=C                 LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] parallel  methods   stats     graphics  grDevices utils     datasets 
+[8] base     
+
+other attached packages:
+[1] multicore_0.1-7    DEXSeq_1.6.0       DESeq_1.12.0       lattice_0.20-15   
+[5] locfit_1.5-9.1     Biobase_2.20.0     BiocGenerics_0.6.0
+
+loaded via a namespace (and not attached):
+ [1] annotate_1.38.0      AnnotationDbi_1.22.5 biomaRt_2.16.0      
+ [4] Biostrings_2.28.0    bitops_1.0-5         DBI_0.2-7           
+ [7] genefilter_1.42.0    geneplotter_1.38.0   GenomicRanges_1.12.4
+[10] grid_3.0.0           hwriter_1.3          IRanges_1.18.1      
+[13] RColorBrewer_1.0-5   RCurl_1.95-4.1       Rsamtools_1.12.3    
+[16] RSQLite_0.11.4       splines_3.0.0        statmod_1.4.17      
+[19] stats4_3.0.0         stringr_0.6.2        survival_2.37-4     
+[22] XML_3.96-1.1         xtable_1.7-1         zlibbioc_1.6.0      
